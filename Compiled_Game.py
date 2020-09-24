@@ -65,7 +65,7 @@ class Quiz:
                                        font="Arial 10 bold", bg="white")
         self.higher_number_entry.grid(row=3)
 
-        # Game Buttons (row 2)
+        # Games button (row 2)
         self.game_buttons_frame = Frame(self.quiz_frame, bg="white")
 
         self.game_buttons_frame.grid(row=3, pady=10)
@@ -92,8 +92,7 @@ class Quiz:
         self.easy_button.config(state=DISABLED)
         self.hard_button.config(state=DISABLED)
 
-
-        # stats / help button frame (row 5)
+        # Stats / help button frame (row 5)
         self.stats_help_frame = Frame(self.quiz_frame)
         self.stats_help_frame.grid(row=4, pady=10)
 
@@ -345,7 +344,7 @@ class Game:
         self.game_entry.config(state=NORMAL)
         self.game_entry.delete(0, 'end')
 
-        # Generates Addition/Subtraction/Multiplication
+        # Generates Addition//Multiplication
         if op == 1:
             higher_low_number = random.randrange(lower_amount, higher_amount)
             higher_low_number2 = random.randrange(lower_amount, higher_amount)
@@ -374,6 +373,7 @@ class Game:
 
         self.history_questions.append(questions)
 
+        # Checks answers whether its right or wrong
         self.check_answer_button = Button(self.dismiss_export_frame, text="Check Answer", font="arial 10 bold", fg="black",
                                     bg="#8589FF", pady=7, width=13,
                                     command=lambda: self.check_answer(lower_amount, higher_amount, op,
